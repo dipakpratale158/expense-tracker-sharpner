@@ -1,10 +1,28 @@
 import './App.css';
-import ExpenseItem from './component/ExpenseItem.js';
-function App() {
+import ExpenseItem from './component/expenses/ExpenseItem.js';
+import expenses from './expenses';
+import "./component/expenses/Expenses.css"
+import Card from './component/ui/Card';
+
+function createexpense(exp){
   return (
-    <div className="App">
-        <ExpenseItem />
-    </div>
+    <ExpenseItem
+  title={exp.title}
+  amounth={exp.amounth}
+  date={exp.date}
+
+/>
+  )
+}
+
+function App() {
+
+
+  return (
+    <Card className="expenses">
+       {expenses.map(createexpense)}
+
+    </Card>
   );
 }
 
