@@ -7,9 +7,10 @@ import Card from './component/ui/Card';
 function createexpense(exp){
   return (
     <ExpenseItem
-  title={exp.title}
-  amounth={exp.amounth}
   date={exp.date}
+  amounth={exp.amounth}
+  location={exp.location}
+  title={exp.title}
 
 />
   )
