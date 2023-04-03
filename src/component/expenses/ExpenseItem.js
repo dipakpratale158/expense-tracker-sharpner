@@ -10,7 +10,7 @@ const Expenseitem = (props) => {
     <Card className='expense-item'>
        <ExpenseDate date={props.date}/>
        <ExpenseDetails amounth={props.amounth}  location={props.location}   title={props.title} />
-
+        <button className='btn'> X</button>
     </Card>
   )
 }

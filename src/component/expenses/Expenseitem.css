@@ -46,6 +46,15 @@
     padding: 0.5rem;
     border-radius: 12px;
   }
+
+  .btn{
+    margin: 1rem;
+    padding: 10px;
+    float: left;
+  width: 10%;
+  background-color: #f44336;
+
+  }
   
   @media (min-width: 580px) {
     .expense-item__description {
