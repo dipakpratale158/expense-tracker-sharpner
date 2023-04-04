@@ -1,6 +1,6 @@
 import './App.css';
 import ExpenseItem from './component/ExpensesE/ExpenseItem.js';
-import expenses from './expenses';
+import DUMMY_EXPENSES from './DUMMY_EXPENSES';
 import "./component/ExpensesE/Expenses.css"
 import Card from './component/Ui/Card';
 import NewExpense from './component/NewExpensen/NewExpense';
@@ -22,19 +22,27 @@ function createexpense(exp){
 
 function App() {
 
-
-const [filterdyear,setFilterYear]=useState("2020")
+//dropdoun
+const [filterdyear,setFilterYear]=useState("2021")
 const handlefilterchange=selectYear=>{
   setFilterYear(selectYear)
 }
-const handleaddexpense=expenseparent=>{
-  console.log("in app.js")
-  console.log(expenseparent)
-}
+
+
+////expenseformdetail
+const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+const handleaddexpense = (expense) => {
+  setExpenses((prevExpenses) => {
+    return [expense, ...prevExpenses];
+  });
+};
 
   return (
 <div>
-    <NewExpense onaddexpense={handleaddexpense}/>
+    <NewExpense  onaddexpense={handleaddexpense}
+    
+    />
+
     <Card className="expenses">
 <ExpensesFilter selected={filterdyear} onChangefilter={handlefilterchange}/>
        {expenses.map(createexpense)}

@@ -1,4 +1,4 @@
-const expenses = [
+const DUMMY_EXPENSES = [
 
     {
       id: 'e1',
@@ -31,4 +31,4 @@ const expenses = [
 
   ];
   
-  export default expenses;
+  export default DUMMY_EXPENSES;
